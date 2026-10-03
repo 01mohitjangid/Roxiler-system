@@ -1,0 +1,6 @@
+{
+  "name": "@roxiler/shared",
+  "private": true,
+  "type": "module",
+  "exports": "./validation.js"
+}

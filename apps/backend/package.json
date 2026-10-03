@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:setup": "node --env-file-if-exists=.env db/setup.js",
+    "create-admin": "node --env-file-if-exists=.env db/create-admin.js",
+    "dev": "node --watch --env-file-if-exists=.env src/server.js",
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "test": "node --env-file-if-exists=.env --test --test-concurrency=1 'test/*.test.js'",
+    "lint": "oxlint"
+  },
+  "dependencies": {
+    "@roxiler/shared": "*",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "oxlint": "^1.86.0"
+  }
+}
